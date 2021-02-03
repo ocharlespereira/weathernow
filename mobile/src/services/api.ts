@@ -1,10 +1,8 @@
 import axios from 'axios';
-import {API_BASE, API_KEY} from '@env';
-
-const weatherKey = API_KEY;
+import { API_BASE } from '@env';
 
 const api = axios.create({
   baseURL: `${API_BASE}/data/2.5`,
 });
 
-export {api, weatherKey};
+export default api;

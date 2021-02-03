@@ -140,10 +140,23 @@ $ yarn start
 # Em seguida abra outra aba do terminal e abra o app via dispositivo com o seguinte comando:
 
 # Para android
-$ yarn device-android
+$ yarn android
 
 # Para ios
-$ yarn device-ios
+$ yarn ios
+```
+
+**Observação importante para execução em Android**
+
+```bash
+# Caso o projeto no momento da execução dê erro de assinatura, acesse o seguinte caminho abaixo, e em seguida exclua o arquivo `signing-config.json`:
+
+"android\app\build\intermediates\signing_config\debug\out"
+
+# Após exclusão refaça novamente o processo de execuçãoes padrões via terminal:
+
+$ yarn android
+
 ```
 
 ---

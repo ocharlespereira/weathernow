@@ -5,7 +5,8 @@ import ptBR, { format } from 'date-fns';
 
 import { useGetLocation } from '../../hooks/useGetLocation';
 
-import { api, weatherKey } from '../../services/api';
+import api from '../../services/api';
+import { API_KEY } from '@env';
 import { themeWeather, iconWeather } from '../../utils/utils';
 import colors from '../../styles/colors';
 
@@ -69,7 +70,7 @@ const Home: React.FC = () => {
           params: {
             lat: currentLatitude.substr(0, 8),
             lon: currentLongitude.substr(0, 8),
-            appid: weatherKey,
+            appid: API_KEY,
             lang: 'pt_br',
             units: 'metric',
           },
